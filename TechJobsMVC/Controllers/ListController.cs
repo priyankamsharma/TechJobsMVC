@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using TechJobsMVC.Data;
 using TechJobsMVC.Models;
@@ -32,6 +29,7 @@ namespace TechJobsMVC.Controllers
         {
             ViewBag.columns = ColumnChoices;
             ViewBag.tableChoices = TableChoices;
+            ViewBag.all = JobData.FindAll();
             ViewBag.employers = JobData.GetAllEmployers();
             ViewBag.locations = JobData.GetAllLocations();
             ViewBag.positionTypes = JobData.GetAllPositionTypes();
